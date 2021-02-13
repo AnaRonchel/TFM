@@ -33,10 +33,15 @@ Scripts in this directory:
 
 **Motif_percentage_and_score_representation.R** generates the plots of the percentages of peaks with CTCF motifs inside and of the CTCF motif score distribution. 
 
+## TADs boundaries enrichment analysis
 
+This directory contains the scripts used to calculated the overlap between peaks and TADs boundaries shown in the section 4.2.2 of the master thesis. The Data directoy must contain a .domain file with TAD coordinates and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script).
 
+Scripts in this directory:
 
+**intersect_peaks_with_TAD_boundaries.sh** calculates the peaks overlap percentages in each 10bp segment in a window of ±500 kb around the TAD boundary
 
+**pverlap_plot.R** makes a histogram with the percentages calculated in the previous step. 
 
 ![](Scheme1.png)
 
@@ -62,6 +67,7 @@ ChIPQC
 Diffbind
 R
 deeptools
+Homer
 
 
 
