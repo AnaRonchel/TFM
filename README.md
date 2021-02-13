@@ -23,6 +23,19 @@ Scripts in this directory:
 
 **chipseeker.R** annotates the peaks to obtain the percentages of peaks associated with each genomic feature (promoter, 3' UTR, distal intergenic, etc). 
 
+## CTCF motif analysis
+
+This directory contains the scripts used to do the motif analysis explained in the section 4.2.1 of the master thesis. The Data directoy must contain lost and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script) and the CTCF.motif matrix file from Homer.  
+
+Scripts in this directory:
+
+**Motif_analysis.sh** uses the findMotifsGenome.pl homer program to generate several reports, among which is the knownResults.html file, from which we get the percentage of peaks with CTCF motif. It also annotates the peaks with the motif score.
+
+**Motif_percentage_and_score_representation.R** generates the plots of the percentages of peaks with CTCF motifs inside and of the CTCF motif score distribution. 
+
+
+
+
 
 
 ![](Scheme1.png)
