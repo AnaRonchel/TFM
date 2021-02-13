@@ -5,8 +5,7 @@ This repository contains the code used to perform the analysis described in the 
 
 ## ChIP-Seq analysis
 
-This directory contains the scripts used to do the binding sites study explained in the section 4.2 of the master thesis. The Data directoy must contain fastq files from ChIP-Seq experiment, mm10 genome indexed, 
-The 
+This directory contains the scripts used to do the binding sites study explained in the section 4.2 of the master thesis. The Data directoy must contain fastq files from ChIP-Seq experiment and mm10 indexed genome files in order to start running the first script. The files needed to run the rest of the scripts (specified in the description of each one) are generated throughout the analysis. 
 
 Scripts in this directory:
 
