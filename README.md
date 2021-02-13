@@ -14,7 +14,15 @@ Scripts in this directory:
 
 **CTCF_chipQC.R** generates a quality report about the peaks with ChIPQC.
 
-**DiffBind_lost_vs_retained.R** identifies differential binding sites and generates bed files with "lost" peaks (those only present in the control samples) and "retained" peaks (those present in both control and CTCF-deficient samples). 
+**DiffBind_lost_vs_retained.R** identifies differential binding sites and generates bed files with "lost" peaks (those only present in the control samples) and "retained" peaks (those present in both control and CTCF-deficient samples), using DiffBind.  
+
+**Peak_size_distribution.R** makes a histogram with the size of the peaks of lost and retained groups.  
+
+**BigWig_generation.sh** indexes the bam files with samtools and generates BigWig files with bamCompare from the suite of python tools deeptools. 
+
+**Profile_plot_generation.sh** generates a plot of the peak signal of each sample around lost and retained peaks using computeMatrix and plotProfile functions from deeptools. 
+
+**chipseeker.R** annotates the peaks to obtain the percentages of peaks associated with each genomic feature (promoter, 3' UTR, distal intergenic, etc). 
 
 
 
@@ -30,4 +38,19 @@ Scripts in this directory:
 
 
 More details about the scripts can be found in the description they contain.
+
+The following softwares were used:
+
+fastqc
+bowtie2
+samtools
+sambamba
+macs2
+ChIPQC
+Diffbind
+R
+deeptools
+
+
+
 
