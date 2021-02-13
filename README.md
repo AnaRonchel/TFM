@@ -5,9 +5,11 @@ This repository contains the code used to perform the analysis described in the 
 
 ## ChIP-Seq analysis
 
-Data directoy with fastq files, mm10 genome indexed, 
+This directory contains the scripts used to do the binding sites study explained in the section 4.2 of the master thesis. The Data directoy must contain fastq files from ChIP-Seq experiment, mm10 genome indexed, 
+The 
+Scripts in this directory:
 
-**Basic_ChIPSeq_analysis.sh** processes the reads from ChIP-Seq experiment and obtained the peak files. It does the quality assesment with Fastqc, the read mappingg with bowtie2 and the peak-calling with macs2. 
+**Basic_ChIPSeq_analysis.sh** processes the reads files from ChIP-Seq experiment and obtains the peak files. It does the quality assesment with fastqc, the read mapping with bowtie2, uses samtools to convert bam to sam, sort and filters the reads with sambamba and makes the peak-calling with macs2. 
 
 ![](Scheme1.png)
 
@@ -18,4 +20,7 @@ Data directoy with fastq files, mm10 genome indexed,
 
 
 ![](Scheme2.png)
+
+
+More details about the scripts can be found in the description they contain.
 
