@@ -102,11 +102,11 @@ More details about the analysis can be found in the description included in each
 
 **macs2**: Zhang, Y. et al. Model-based analysis of ChIP-Seq (MACS). Genome Biology 9, R137 (2008).
 
-**ChIPQC**:
+**ChIPQC**: Carroll, T. S., Liang, Z., Salama, R., Stark, R. & de Santiago, I. Impact of artifact removalon ChIP quality metrics in ChIP-seq and ChIP-exo data.Frontiers in Genetics5(2014).
 
 **Diffbind**: Ross-Innes, C. S. et al. Differential oestrogen receptor binding is associated with clinical outcome in breast cancer. Nature 481, 389–393 (2012).
 
-**R**: R Core Team. R: A Language and Environment for Statistical Computing https://www.r- project.org/
+**R**: R Core Team. R: A Language and Environment for Statistical Computing https://www.r-project.org/
 
 **deeptools**: Ramírez, F. et al. deepTools2: a next generation web server for deep-sequencing data anal- ysis. Nucleic acids research 44, W160–W165 (2016).
 
