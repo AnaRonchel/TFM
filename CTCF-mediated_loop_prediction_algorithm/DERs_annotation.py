@@ -4,7 +4,7 @@
 # Date: 10-01-2021
 # Description: This script annotates a BED file with the genes included in
 #              each of the regions with a significant CES (Differentially
-#              Expressed Regions, DEGs).
+#              Expressed Regions, DERs).
 #
 # Input:
 #       - Arg1: Differential expression annotated genes file obtained with the
@@ -19,8 +19,8 @@
 #
 # Execution example:
 #
-# ./DEGs_annotation.py ../Data/gene_exp_from_galaxy.csv ../Results/OE_and_UE_regions/Loop_OE_regions.bed OE
-# ./DEGs_annotation.py ../Data/gene_exp_from_galaxy.csv ../Results/OE_and_UE_regions/Loop_UE_regions.bed UE
+# ./DERs_annotation.py ../Data/gene_exp_from_galaxy.csv ../Results/OE_and_UE_regions/Loop_OE_regions.bed OE
+# ./DERs_annotation.py ../Data/gene_exp_from_galaxy.csv ../Results/OE_and_UE_regions/Loop_UE_regions.bed UE
 #
 ################################# MAIN #########################################
 
