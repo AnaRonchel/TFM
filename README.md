@@ -35,7 +35,7 @@ Scripts in this directory:
 
 ## TADs boundaries enrichment analysis
 
-This directory contains the scripts used to calculated the overlap between peaks and TADs boundaries shown in section 4.2.2. The "data" directoy must contain a .domain file with TAD coordinates and "lost" and "retained" peaks bed files (obtained with the DiffBind_lost_vs_retained.R script).
+This directory contains the scripts used to calculate the overlap between peaks and TADs boundaries shown in section 4.2.2. The "data" directoy must contain a .domain file with TAD coordinates and "lost" and "retained" peaks bed files (obtained with the DiffBind_lost_vs_retained.R script).
 
 Scripts in this directory:
 
