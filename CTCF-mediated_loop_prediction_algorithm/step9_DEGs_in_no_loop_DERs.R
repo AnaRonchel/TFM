@@ -3,7 +3,7 @@
 # AUTHOR: Ana Rodriguez Ronchel
 #
 # DESCRIPTION: This script processes the output file of the script 
-#              "step8_OE_UE_no_loop_annotation_and_proportion_comm_genes.sh"
+#              "step8_no_loop_DERs_annotation_and_DEGs_quantification.sh"
 #              to know what is the average number of DEGs included in the 
 #              no loop regions with a significant CES selected with the
 #              script "step5_loop_and_no_loop_features.R"
