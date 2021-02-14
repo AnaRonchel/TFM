@@ -82,7 +82,7 @@ Scripts in this directory:
 
 **step8_no_loop_DERs_annotation_and_DEGs_quantification.sh** annotates the DERs from the no-loop group selected in the step5 with the genes included in each of the regions and quantify how many of those genes are DEGs. It uses the python script **DERs_annotation.py**. The output is a file with the number of DEGs included in 100 random groups of no-loop DERs.
 
-**step9_DEGs_in_no_loop_DERs.R** calculates the average number of DEGs included in 100 no loop DERs annotated in the step8.
+**step9_DEGs_in_no_loop_DERs.R** calculates the average number of DEGs included in the 100 groups of no loop DERs annotated in the step8.
 
 Scheme of first 4 steps of the analysis:
 
@@ -92,29 +92,31 @@ More details about the analysis can be found in the description included in each
 
 ### Softwares needed:
 
-fastqc
+**fastqc**: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
-bowtie2
+**bowtie2**: Langmead, B. & Salzberg, S. L. Fast gapped-read alignment with Bowtie 2. Nature Methods 9, 357–359 (2012).
 
-samtools
+**samtools**: Li, H. et al. The Sequence Alignment/Map format and SAMtools. Bioinformatics 25, 2078– 2079 (2009).
 
-sambamba
+**sambamba**: Tarasov, A., Vilella, A. J., Cuppen, E., Nijman, I. J. & Prins, P. Sambamba: fast processing of NGS alignment formats. Bioinformatics 31, 2032–2034 (2015).
 
-macs2
+**macs2**: Zhang, Y. et al. Model-based analysis of ChIP-Seq (MACS). Genome Biology 9, R137 (2008).
 
-ChIPQC
+**ChIPQC**:
 
-Diffbind
+**Diffbind**: Ross-Innes, C. S. et al. Differential oestrogen receptor binding is associated with clinical outcome in breast cancer. Nature 481, 389–393 (2012).
 
-R
+**R**: R Core Team. R: A Language and Environment for Statistical Computing https://www.r- project.org/
 
-deeptools
+**deeptools**: Ramírez, F. et al. deepTools2: a next generation web server for deep-sequencing data anal- ysis. Nucleic acids research 44, W160–W165 (2016).
 
-Homer
+**ChIPseeker**: Yu, G., Wang, L. G. & He, Q. Y. ChIP seeker: An R/Bioconductor package for ChIP peak annotation, comparison and visualization. Bioinformatics 31, 2382–2383 (2015).
 
-bedtools
+**Homer**: Heinz, S. et al. Simple Combinations of Lineage-Determining Transcription Factors Prime cis-Regulatory Elements Required for Macrophage and B Cell Identities. Molecular Cell 38, 576–589 (2010).
 
-python
+**bedtools**: Quinlan, A. R. & Hall, I. M. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics 26, 841–842 (2010).
+
+**python**: https://www.python.org/
 
 
 
