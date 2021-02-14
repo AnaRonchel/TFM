@@ -70,9 +70,12 @@ Scripts in this directory:
 
 **step2_potential_loop_selection_and_sorting.sh** generates a bed file with the coordinates of the genome regions that could correspond with DNA loops that were present in the control condition but not in the CTCF-deficient condition. It make use of the python script **Potential_loop_selection.py**.
 
+**step3_random_No_loop_selection_and_sorting_x100.sh** uses the bedtools shuffle function to generate a bed file with same regions size that loop file generated in the step2 but with random location.
+
+**step4_region_CES_annotation.sh** 
 
 
-Scheme of first steps of the analysis:
+Scheme of first 4 steps of the analysis:
 
 ![](Scheme2.png)
 
@@ -91,6 +94,8 @@ Diffbind
 R
 deeptools
 Homer
+bedtools
+
 
 
 
