@@ -62,40 +62,59 @@ Scheme of the analysis:
 
 ## CTCF-mediated loop prediction algorithm
 
-This directory contains the scripts used to analyse the transcriptomic regulation madiated by CTCF loops, explained in the section 4.4.2 of the master thesis. The Data directoy must contain lost and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script), CTCF.motif matrix file from Homer, 
+This directory contains the scripts used to analyse the transcriptomic regulation madiated by CTCF loops, explained in the section 4.4.2 of the master thesis. The Data directoy must contain lost and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script), CTCF.motif matrix file from Homer and the differential expression annotated genes file obtained with the DESeq2 program in the RNA-Seq analysis. 
 
 Scripts in this directory:
 
 **step1_peaks_motif_annotation.sh** uses the findMotifsGenome.pl homer program to generate a bed file with peaks that have a motif with a score > 8.7 and annotate the strand in which the motif has been found. 
 
-**step2_potential_loop_selection_and_sorting.sh** generates a bed file with the coordinates of the genome regions that could correspond with DNA loops that were present in the control condition but not in the CTCF-deficient condition. It make use of the python script **Potential_loop_selection.py**.
+**step2_potential_loop_selection_and_sorting.sh** generates a bed file with the coordinates of the genome regions that could correspond with DNA loops that were present in the control condition but not in the CTCF-deficient condition. It uses the python script **Potential_loop_selection.py**.
 
 **step3_random_No_loop_selection_and_sorting_x100.sh** uses the bedtools shuffle function to generate a bed file with same regions size that loop file generated in the step2 but with random location.
 
-**step4_region_CES_annotation.sh** 
+**step4_region_CES_annotation.sh** annotates peak bed files with information about the coordinated expression score (CES) of each region and the number of genes within it. It uses the python script **Region_CES_annotation.py**.
 
+**step5_loop_and_no_loop_features.R** generates plots related with different characteristics of the loop and no loop regions generated in the previous steps (region size, number of genes, CES) and selects regions with a significant CES (Differentially Expressed Regions, DERs).  
+
+**step6_loop_DERs_annotation.sh** annotates the DERs from the loop group selected in the step5 with the genes included in each of the regions and list with the gene names. It uses the python script **DERs_annotation.py**.
+
+**step7_DEGs_in_loop_DERs.sh** select and quantify the genes common to the DEGs list and the gene list generated in the step6 (genes inside loop DERs).
+
+**step8_no_loop_DERs_annotation_and_DEGs_quantification.sh** annotates the DERs from the no-loop group selected in the step5 with the genes included in each of the regions and quantify how many of those genes are DEGs. It uses the python script **DERs_annotation.py**. The output is a file with the number of DEGs included in 100 random groups of no-loop DERs.
+
+**step9_DEGs_in_no_loop_DERs.R** calculates the average number of DEGs included in 100 no loop DERs annotated in the step8.
 
 Scheme of first 4 steps of the analysis:
 
 ![](Scheme2.png)
 
+More details about the analysis can be found in the description included in each script.
 
-More details about the scripts can be found in the description they contain.
-
-The following softwares were used:
+### Softwares needed:
 
 fastqc
+
 bowtie2
+
 samtools
+
 sambamba
+
 macs2
+
 ChIPQC
+
 Diffbind
+
 R
+
 deeptools
+
 Homer
+
 bedtools
 
+python
 
 
 
