@@ -3,7 +3,7 @@
 # AUTHOR: Ana Rodriguez Ronchel
 #
 # DESCRIPTION: 
-# This script generates plots related with differents characteristic of
+# This script generates plots related with different characteristics of
 # the loop and no loop regions generated in the previous steps:
 #     - Size of the regions
 #     - Number of genes per region.
