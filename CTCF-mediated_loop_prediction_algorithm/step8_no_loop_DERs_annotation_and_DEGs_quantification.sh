@@ -9,8 +9,7 @@
 # INPUT:
 #       - Arg1: Differential expression annotated genes file obtained with the
 #               DESeq2 program in the RNA-Seq analysis.
-#       - Arg2: Bed file with the no loop regions with significant CES (OE and
-#               UE regions bed file joined).
+#       - Arg2: Bed file with the no loop DERs (OE and UE regions bed file joined).
 #       - Arg3: gene list from RNA-Seq analysis (DEGs). 
 #
 # OUTPUT:
@@ -24,16 +23,16 @@
 # The parent directoy must contain the next directories: 
 #     - Data: with the expression file 
 #     - Results/OE_and_UE_regions_no_loops: with the no loop regions with 
-#                                           significant CES bed file 
+#                                           significant CES (DEGs) bed file 
 #                                           generated in the step5. 
-#     - Scripts: this script and the script "OE_UE_regions_annotation.py"
+#     - Scripts: this script and the script "DERs_annotation.py"
 #
 # Installed programs: Python
 #
 ##################################### RUN EXAMPLE #############################
 #
 # For loops OE:
-# ./step8_selected_no_loop_regions_annotation.sh No_NA_gene_exp_from_galaxy.csv No_loop_regions.bed sorted_DEGs.txt
+# ./step8_no_loop_DERs_annotation_and_DEGs_quantification.sh No_NA_gene_exp_from_galaxy.csv No_loop_regions.bed sorted_DEGs.txt
 #
 ######################################### MAIN ################################
 
@@ -67,7 +66,7 @@ for i in {1..100}; do
 
     # Run the Annotation python script 
 
-    ./OE_UE_regions_annotation.py ../Data/$Expression_file ../Results/OE_and_UE_regions_no_loop/52_$Loop_regions_file No_loop
+    ./DERs_annotation.py ../Data/$Expression_file ../Results/OE_and_UE_regions_no_loop/52_$Loop_regions_file No_loop
 
     sort ../Results/No_loop_regions_annotated/No_loops_genes.bed > ../Results/No_loop_regions_annotated/sorted_No_loops_genes.bed
 
