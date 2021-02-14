@@ -35,7 +35,7 @@ Scripts in this directory:
 
 ## TADs boundaries enrichment analysis
 
-This directory contains the scripts used to calculated the overlap between peaks and TADs boundaries shown in the section 4.2.2 of the master thesis. The Data directoy must contain a .domain file with TAD coordinates and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script).
+This directory contains the scripts used to calculated the overlap between peaks and TADs boundaries shown in the section 4.2.2 of the master thesis. The Data directoy must contain a .domain file with TAD coordinates and lost and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script).
 
 Scripts in this directory:
 
@@ -60,9 +60,19 @@ Scheme of the analysis:
 
 ![](Scheme1.png)
 
-## CTCF mediated loop prediction algorithm
+## CTCF-mediated loop prediction algorithm
+
+This directory contains the scripts used to analyse the transcriptomic regulation madiated by CTCF loops, explained in the section 4.4.2 of the master thesis. The Data directoy must contain lost and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script), CTCF.motif matrix file from Homer, 
+
+Scripts in this directory:
+
+**step1_peaks_motif_annotation.sh** uses the findMotifsGenome.pl homer program to generate a bed file with peaks that have a motif with a score > 8.7 and annotate the strand in which the motif has been found. 
+
+**step2_potential_loop_selection_and_sorting.sh** generates a bed file with the coordinates of the genome regions that could correspond with DNA loops that were present in the control condition but not in the CTCF-deficient condition. It make use of the python script **Potential_loop_selection.py**.
 
 
+
+Scheme of first steps of the analysis:
 
 ![](Scheme2.png)
 
