@@ -46,15 +46,21 @@ Scripts in this directory:
 
 ## Analysis of CTCF binding in promoter regions
 
-This directory contains the scripts used to quantify the number of DEGs   
+This directory contains the scripts used to quantify the number of DEGs with a lost peak in their promoter region, explained in the section 4.4.1 of the master thesis. The Data directoy must contain the peak annotation file (obtained with chipseeker.R script) and the differential expression annotated genes file obtained with the DESeq2 program in the RNA-Seq analysis. 
 
-calculated the overlap between peaks and TADs boundaries shown in the section 4.2.2 of the master thesis.
+Scripts in this directory:
+
+**step1_filter_genes_with_peaks_in_promoter_regions.sh** filters the peaks associated with promoter regions and generates a list with the gene names. 
+
+**step2_select_genes_symbol_from_DE_analysis_file** extract the DEGs names from the differential expression file obtained in the RNA-Seq analysis
+
+**step3_number_comm_genes.sh** select and quantify the genes common to the two list generated in the previous steps. 
+
+Scheme of the analysis:
 
 ![](Scheme1.png)
 
-
-
-
+## CTCF mediated loop prediction algorithm
 
 
 
