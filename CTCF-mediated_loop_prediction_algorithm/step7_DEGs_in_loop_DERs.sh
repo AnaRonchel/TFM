@@ -26,7 +26,7 @@
 #
 ##################################### RUN EXAMPLE #############################
 #
-# ./step7_DEGs_in_loop_regions.sh loops_genes.txt sorted_DEGs.txt
+# ./step7_DEGs_in_loop_DERs.sh loops_genes.txt sorted_DEGs.txt
 #
 ######################################### MAIN ################################
 
