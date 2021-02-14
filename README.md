@@ -35,7 +35,7 @@ Scripts in this directory:
 
 ## TADs boundaries enrichment analysis
 
-This directory contains the scripts used to calculate the overlap between peaks and TADs boundaries shown in section 4.2.2. The "data" directoy must contain a .domain file with TAD coordinates and "lost" and "retained" peaks bed files (obtained with the DiffBind_lost_vs_retained.R script).
+This directory contains the scripts used to calculate the overlap between peaks and TADs boundaries shown in section 4.2.2. The "data" directoy must contain a .domain file with TAD coordinates and "lost" and "retained" peaks' bed files (obtained with the DiffBind_lost_vs_retained.R script).
 
 Scripts in this directory:
 
@@ -62,7 +62,7 @@ Scheme of the analysis:
 
 ## CTCF-mediated loop prediction algorithm
 
-This directory contains the scripts used to analyse the transcriptomic regulation madiated by CTCF loops, explained in section 4.4.2. The Data directoy must contain lost and retained peaks bed files (obtained with the DiffBind_lost_vs_retained.R script), CTCF.motif matrix file from Homer and the differential expression annotated genes file obtained with the DESeq2 program in the RNA-Seq analysis. 
+This directory contains the scripts used to analyse the transcriptomic regulation madiated by CTCF loops, explained in section 4.4.2. The Data directoy must contain lost and retained peaks' bed files (obtained with the DiffBind_lost_vs_retained.R script), CTCF.motif matrix file from Homer and the differential expression annotated genes file obtained with the DESeq2 program in the RNA-Seq analysis. 
 
 Scripts in this directory:
 
@@ -72,13 +72,13 @@ Scripts in this directory:
 
 **step3_random_No_loop_selection_and_sorting_x100.sh** uses the bedtools shuffle function to generate a bed file with same regions size that loop file generated in the step2 but with random location.
 
-**step4_region_CES_annotation.sh** annotates peak bed files with information about the coordinated expression score (CES) of each region and the number of genes within it. It uses the python script **Region_CES_annotation.py**.
+**step4_region_CES_annotation.sh** annotates peaks' bed files with information about the coordinated expression score (CES) of each region and the number of genes within it. It uses the python script **Region_CES_annotation.py**.
 
 **step5_loop_and_no_loop_features.R** produces plots related with different characteristics of the loop and no loop regions generated in the previous steps (region size, number of genes, CES) and selects regions with a significant CES (Differentially Expressed Regions, DERs).  
 
 **step6_loop_DERs_annotation.sh** annotates the DERs from the loop group selected in step 5 with the genes included in each of the regions and list with the gene names. It uses the python script **DERs_annotation.py**.
 
-**step7_DEGs_in_loop_DERs.sh** selects and quantiies the genes common to the DEGs list and the gene list generated in step 6 (genes inside loop DERs).
+**step7_DEGs_in_loop_DERs.sh** selects and quantifies the genes common to the DEGs list and the gene list generated in step 6 (genes inside loop DERs).
 
 **step8_no_loop_DERs_annotation_and_DEGs_quantification.sh** annotates the DERs from the no-loop group selected in the step5 with the genes included in each of the regions and quantify how many of those genes are DEGs. It uses the python script **DERs_annotation.py**. The output is a file with the number of DEGs included in 100 random groups of no-loop DERs.
 
