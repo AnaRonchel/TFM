@@ -41,7 +41,14 @@ Scripts in this directory:
 
 **intersect_peaks_with_TAD_boundaries.sh** calculates the peaks overlap percentages in each 10bp segment in a window of ±500 kb around the TAD boundary
 
-**pverlap_plot.R** makes a histogram with the percentages calculated in the previous step. 
+**overlap_plot.R** makes a histogram with the percentages calculated in the previous step. 
+
+
+## Analysis of CTCF binding in promoter regions
+
+This directory contains the scripts used to quantify the number of DEGs   
+
+calculated the overlap between peaks and TADs boundaries shown in the section 4.2.2 of the master thesis.
 
 ![](Scheme1.png)
 
